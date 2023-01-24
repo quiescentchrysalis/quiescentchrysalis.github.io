@@ -12,7 +12,7 @@
   <header>
   <nav class="crumbs">
     <ul >
-  <li><a href="dr_index.html">Home</a></li>
+  <li><a href="./Tic-Tac-Toe/main.html">Tic-Tac-Toe</a></li>
   <li><a href="dr_info.html">Race Info</a> </li>
   <li><a href="dr_faq.html">FAQ</a> </li>
 </ul>
