@@ -1,37 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0">
-   
-    <!-- CSS file Included -->
-    <link rel="stylesheet"
-        type="text/css" href="stylesheet.css">
-   
-    <!-- JavaScript file included -->
-    <script src="gameplay.js"></script>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-<table>
-  <tr>
-    <td id="1"></td>
-    <td id="2"></td>
-    <td id="3"></td>
-  </tr>
-  <tr>
-    <td id="4"></td>
-    <td id="5"></td>
-    <td id="6"></td>
-  </tr>
-  <tr>
-    <td id="7"></td>
-    <td id="8"></td>
-    <td id="9"></td>
-  </tr>
-</table>
-
+   <div class="wrapper">
+       <div class="container">
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+           <button class="button-option"></button>
+       </div>
+       <button id="restart">Restart</button>
+   </div>
+   <div class="popup hide">
+       <p id="message">Sample Message</p>
+       <button id="new-game">New Game</button>
+   </div>
+   
+    <!-- Script -->
+    <script src="gameplay.js"></script>
 </body>
 </html>
