@@ -77,7 +77,7 @@ Here is an example HTML code that demonstrates how to display the chords for a s
   <head>
     <meta charset="UTF-8">
     <title>Chord Detector</title>
-    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@2.0.2/es6/pitch_detection/pitch_detector.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@3.0.2/es6/pitch_detection/pitch_detector.js"></script>
   </head>
   <body>
     <h1>Chord Detector</h1>
@@ -112,7 +112,7 @@ Here is an example HTML code that demonstrates how to display the chords for a s
             const source = audioContext.createMediaStreamSource(stream);
             source.connect(analyzer);
 
-            pitchDetector = new window.magenta.music.PitchDetector(analyzer, audioContext.sampleRate);
+            pitchDetector = new window.magenta.PitchDetector(analyzer, audioContext.sampleRate);
             pitchDetector.onChordDetected = (chord) => {
               currentChord = chord;
               const statusElement = document.getElementById('status');
