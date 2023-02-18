@@ -1,43 +1,31 @@
-// Set variables
-const gameBoard = document.querySelector(".game-board");
-const scoreEl = document.querySelector("#score");
-const timeEl = document.querySelector("#time");
-let score = 0;
-let time = 60;
+// Select the game board element
+const gameBoard = document.querySelector('.game-board');
 
-// Create a function to generate a random number between min and max
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+// Define the number of balls to add
+const numBalls = 10;
 
-// Create a function to add balls to the game board
-function addBall() {
-  const ball = document.createElement("div");
-  ball.classList.add("ball");
-  ball.style.top = random(0, 350) + "px";
-  ball.style.left = random(0, 350) + "px";
-  ball.addEventListener("click", () => {
-    ball.remove();
+// Loop through the number of balls and create a ball element for each one
+for (let i = 0; i < numBalls; i++) {
+  // Create a new ball element
+  const ball = document.createElement('div');
+  ball.classList.add('ball');
+
+  // Set a random position for the ball element
+  const x = Math.floor(Math.random() * (gameBoard.offsetWidth - ball.offsetWidth));
+  const y = Math.floor(Math.random() * (gameBoard.offsetHeight - ball.offsetHeight));
+  ball.style.top = `${y}px`;
+  ball.style.left = `${x}px`;
+
+  // Add a click event listener to the ball element
+  ball.addEventListener('click', () => {
+    // Add the "caught" class to the ball element
+    ball.classList.add('caught');
+
+    // Increment the score by 1
     score++;
-    scoreEl.innerText = score;
+    scoreElement.textContent = score;
   });
+
+  // Add the ball element to the game board
   gameBoard.appendChild(ball);
 }
-
-// Create a function to start the game
-function startGame() {
-  setInterval(() => {
-    if (time > 0) {
-      addBall();
-      time--;
-      timeEl.innerText = time;
-    } else {
-      clearInterval();
-      alert(`Game over! Your score is ${score}.`);
-      location.reload();
-    }
-  }, 1000);
-}
-
-// Call the startGame function
-startGame();
