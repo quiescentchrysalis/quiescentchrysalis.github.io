@@ -112,7 +112,7 @@ Here is an example HTML code that demonstrates how to display the chords for a s
             const source = audioContext.createMediaStreamSource(stream);
             source.connect(analyzer);
 
-            pitchDetector = new window.magenta.PitchDetector(analyzer, audioContext.sampleRate);
+            pitchDetector = new PitchDetector(analyzer, audioContext.sampleRate);
             pitchDetector.onChordDetected = (chord) => {
               currentChord = chord;
               const statusElement = document.getElementById('status');
