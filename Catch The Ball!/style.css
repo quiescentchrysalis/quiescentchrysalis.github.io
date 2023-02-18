@@ -1,0 +1,48 @@
+/* CSS styles for the game container */
+.container {
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* CSS styles for the score and timer elements */
+  .score, .timer {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* CSS styles for the game board */
+  .game-board {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid black;
+    position: relative;
+  }
+  
+  /* CSS styles for the ball elements */
+  .ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    animation: moveBall linear 2s infinite;
+  }
+  
+  @keyframes moveBall {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(350px, 350px); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  /* CSS styles for the "caught" class */
+  .caught {
+    background-color: green;
+    animation: none;
+    cursor: default;
+  }
+  
