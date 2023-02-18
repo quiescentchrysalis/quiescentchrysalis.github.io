@@ -147,18 +147,6 @@ Here is an example HTML code that demonstrates how to display the chords for a s
     <meta charset="utf-8">
     <title>Chord Detector</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-      const startBtn = document.getElementById('start-btn');
-    
-      startBtn.addEventListener('click', async () => {
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-          console.log('Media stream acquired:', stream);
-        } catch (error) {
-          console.log('Failed to acquire media stream:', error);
-        }
-      });
-    </script>
   </head>
   <body>
     <h1>Chord Detector</h1>
@@ -168,3 +156,4 @@ Here is an example HTML code that demonstrates how to display the chords for a s
     <script src="script.js"></script>
   </body>
 </html>
+
