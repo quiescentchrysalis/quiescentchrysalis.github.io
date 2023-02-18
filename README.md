@@ -17,6 +17,7 @@
   <li><a href="./Snake/main.html">Snake</a> </li>
   <li><a href="./Memory Game/main.html">Memory Game</a> </li>
   <li><a href="./Chord Me!/main.py">Chord Me!</a> </li>
+  <li><a href="./Catch The Ball!/main.html">Catch The Ball!</a> </li>
 </ul>
 </nav>
   </header>
