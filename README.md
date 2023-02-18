@@ -15,6 +15,7 @@
   <li><a href="./Tic-Tac-Toe/main.html">Tic-Tac-Toe</a></li>
   <li><a href="./Snake/main.html">Snake</a> </li>
   <li><a href="./Memory Game/main.html">Memory Game</a> </li>
+  <li><a href="./Chord Me!/main.html">Memory Game</a> </li>
 </ul>
 </nav>
   </header>
