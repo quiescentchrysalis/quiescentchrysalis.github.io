@@ -1,3 +1,5 @@
+import * as Tone from 'tone';
+
 const audioContext = new Tone.AudioContext();
 
 const startBtn = document.getElementById('start-btn');
