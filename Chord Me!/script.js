@@ -1,16 +1,20 @@
 import * as Tone from 'tone';
 
-const audioContext = new Tone.AudioContext();
-
 const startBtn = document.getElementById('start-btn');
 const chordDisplay = document.getElementById('chord-display');
+let audioContext = null;
+let analyser = null;
 
 startBtn.addEventListener('click', async () => {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioContext = new Tone.Context();
     const source = audioContext.createMediaStreamSource(stream);
-    const analyser = new Tone.Analyser('chord', 2048);
+    analyser = new Tone.Analyser('chord', 2048);
     source.connect(analyser);
+
+    Tone.Transport.start();
+    Tone.context.resume();
 
     setInterval(() => {
       const chord = analyser.getValue();
