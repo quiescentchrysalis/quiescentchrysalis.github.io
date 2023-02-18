@@ -20,7 +20,26 @@ startBtn.addEventListener('click', async () => {
       const chord = analyser.getValue();
       chordDisplay.innerHTML = chord ? `Chord: ${chord}` : 'No chord detected';
     }, 1000);
-  } catch (error) {
+  }
+  catch (error) {
     console.log(error);
   }
+  if (audioContext.state === 'suspended') {
+    await audioContext.resume();
+  }
+  
+  if (analyser.context.state === 'suspended') {
+    await analyser.context.resume();
+  }
+  
+  if (!Tone.context.rawContext.isRunning) {
+    await Tone.context.rawContext.resume();
+  }
+  
+  await Tone.start();
+  
+  if (typeof toneUserGesture !== 'undefined') {
+    await Tone.start();
+  }
+  
 });
