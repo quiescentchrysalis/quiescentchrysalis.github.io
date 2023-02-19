@@ -34,12 +34,17 @@ function dropArrow() {
 		topPos += 10;
 		arrow.style.top = topPos + 'px';
 		if (topPos > 350) {
-			if (arrow.style.left === catcher.style.left) {
-				score++;
-				document.getElementById('score').innerHTML = 'Score: ' + score;
-			}
 			clearInterval(interval);
 			arrow.parentNode.removeChild(arrow);
+		} else if (topPos > 300 && topPos < 350) {
+			var arrowLeft = parseInt(arrow.style.left);
+			var catcherLeft = parseInt(catcher.style.left);
+			if (arrowLeft === catcherLeft) {
+				score++;
+				document.getElementById('score').innerHTML = 'Score: ' + score;
+				clearInterval(interval);
+				arrow.parentNode.removeChild(arrow);
+			}
 		}
 	}, 50);
 	document.getElementById('game-area').appendChild(arrow);
