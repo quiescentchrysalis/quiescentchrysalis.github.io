@@ -1,20 +1,18 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch the Ball Game</title>
+    <title>Catch the Ball</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div class="container">
-        <div class="score">Score: <span id="score">0</span></div>
-        <div class="timer">Time: <span id="time">60</span></div>
-        <div class="game-board">
-          <!-- Player object -->
-          <div id="player"></div>
-        </div>
-      </div>      
-    <script src="script.js"></script>
+    <div id="game-container">
+      <div id="game-area"></div>
+      <div id="scoreboard">
+        <p>Score: <span id="score">0</span></p>
+        <p>Time: <span id="time">60</span> sec</p>
+      </div>
+      <div id="player"></div>
+    </div>
+    <script src="game.js"></script>
   </body>
 </html>
