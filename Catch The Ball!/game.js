@@ -16,53 +16,11 @@ const BLACK = "#000000";
 const RED = "#FF0000";
 
 // set up the player
-let playerWidth = 50;
-let playerHeight = 50;
-let playerX = (WINDOW_WIDTH - playerWidth) / 2;
-let playerY = WINDOW_HEIGHT - playerHeight;
-let playerSpeed = 5;
-let leftPressed = false;
-let rightPressed = false;
-
-// handle key events
-document.addEventListener("keydown", function(event) {
-  if (event.key === "ArrowLeft") {
-    leftPressed = true;
-  } else if (event.key === "ArrowRight") {
-    rightPressed = true;
-  }
-});
-
-document.addEventListener("keyup", function(event) {
-  if (event.key === "ArrowLeft") {
-    leftPressed = false;
-  } else if (event.key === "ArrowRight") {
-    rightPressed = false;
-  }
-});
-
-// handle touch events for mobile devices
-canvas.addEventListener("touchstart", function(event) {
-  const touchX = event.touches[0].clientX - canvas.offsetLeft;
-  if (touchX < playerX + playerWidth / 2) {
-    leftPressed = true;
-  } else if (touchX > playerX + playerWidth / 2) {
-    rightPressed = true;
-  }
-});
-
-canvas.addEventListener("touchend", function(event) {
-  leftPressed = false;
-  rightPressed = false;
-});
-
-// update the player position
-if (leftPressed && playerX > 0) {
-  playerX -= playerSpeed;
-} else if (rightPressed && playerX < WINDOW_WIDTH - playerWidth) {
-  playerX += playerSpeed;
-}
-
+const player_width = 50;
+const player_height = 50;
+let player_x = (WINDOW_WIDTH - player_width) / 2;
+let player_y = WINDOW_HEIGHT - player_height;
+const player_speed = 5;
 
 // set up the ball
 const ball_width = 25;
