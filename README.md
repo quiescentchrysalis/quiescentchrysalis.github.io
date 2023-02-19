@@ -17,7 +17,7 @@
   <li><a href="./Snake/main.html">Snake</a> </li>
   <li><a href="./Memory Game/main.html">Memory Game</a> </li>
   <li><a href="./Chord Me!/main.py">Chord Me!</a> </li>
-  <li><a href="./Catcher!/main.html">Catcher!</a> </li>
+  <li><a href="./Color Match!/main.html">Color Match!</a> </li>
 </ul>
 </nav>
   </header>
