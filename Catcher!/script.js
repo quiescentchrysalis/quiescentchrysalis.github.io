@@ -26,22 +26,24 @@ document.addEventListener('keydown', function(event) {
 });
 
 function dropArrow() {
-	var arrow = document.createElement('div');
-	arrow.classList.add('arrow');
-	arrow.style.left = Math.floor(Math.random() * 380) + 'px';
-	var topPos = 0;
-	var interval = setInterval(function() {
-		topPos += 10;
-		arrow.style.top = topPos + 'px';
-		if (topPos > 350) {
-			if (arrow.style.left === catcher.style.left) {
-				score++;
-				document.getElementById('score').innerHTML = 'Score: ' + score;
-			}
-			clearInterval(interval);
-			arrow.parentNode.removeChild(arrow);
-		}
-	}, 50);
-}
-
-setInterval(dropArrow, 2000);
+    var arrow = document.createElement('div');
+    arrow.classList.add('arrow');
+    arrow.style.left = Math.floor(Math.random() * 380) + 'px';
+    var topPos = 0;
+    var interval = setInterval(function() {
+      topPos += 10;
+      arrow.style.top = topPos + 'px';
+      if (topPos > 350) {
+        if (arrow.style.left === catcher.style.left) {
+          score++;
+          document.getElementById('score').innerHTML = 'Score: ' + score;
+        }
+        clearInterval(interval);
+        arrow.parentNode.removeChild(arrow);
+      }
+    }, 50);
+    document.getElementById('game-area').appendChild(arrow);
+  }
+  
+  setInterval(dropArrow, 2000);
+  
